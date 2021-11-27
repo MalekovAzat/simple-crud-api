@@ -9,7 +9,7 @@ class ErrorController {
     sendResponse(res, {
       statusCode: 400,
       jsonBody: {
-        message: `Provided invalid ${id}`,
+        message: `Provided invalid id ${id}`,
       },
     });
   }

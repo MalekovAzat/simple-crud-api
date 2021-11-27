@@ -117,7 +117,7 @@ describe("E2E test scenario 2. Add 2 person, try update first with incorrect id,
     expect(response.statusCode).toBe(400);
     expect(response.body).toHaveProperty(
       "message",
-      `Provided invalid ${savedId1}abc`
+      `Provided invalid id ${savedId1}abc`
     );
   });
   it("Put. Try to update with inexistent id. Expected 404 and message about inexistent person", async () => {
@@ -188,7 +188,7 @@ describe("E2E test scenario 3. Add 1 person and try to delete with incorrect id,
     expect(response.statusCode).toBe(400);
     expect(response.body).toHaveProperty(
       "message",
-      `Provided invalid ${savedId1}abc`
+      `Provided invalid id ${savedId1}abc`
     );
   });
 
