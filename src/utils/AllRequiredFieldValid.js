@@ -17,7 +17,10 @@ function allRequiredFieldValid(obj, requiredFileds) {
     checkType(obj[key], nameToTypeMap[key])
   );
 
-  return foundedRequiredKeys.length === filteredByTypeKeys.length;
+  return (
+    foundedRequiredKeys.length === filteredByTypeKeys.length &&
+    filteredByTypeKeys.length !== 0
+  );
 }
 
 module.exports = allRequiredFieldValid;
